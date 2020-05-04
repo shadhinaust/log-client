@@ -1,0 +1,18 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <div class="form-group">
+      <label>Message</label>
+      <input name="message" #message="ngModel" [(ngModel)]="service.formData.message" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Format</label>
+        <input name="format" #format="ngModel" [(ngModel)]="service.formData.format" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Duration</label>
+        <input name="duration" #duration="ngModel" [(ngModel)]="service.formData.duration" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Publish</button>
+    </div>
+  </form>

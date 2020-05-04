@@ -1,0 +1,8 @@
+<table class="table table-hover">
+    <tr *ngFor="let log of service.list">
+      <td (click)="populateForm(log)">{{log.dateTime}}</td>
+      <td (click)="populateForm(log)">{{log.message}}</td>
+      <td (click)="populateForm(log)">{{log.format}}</td>
+      <td (click)="populateForm(log)">{{log.duration}}</td>
+    </tr>
+</table>
